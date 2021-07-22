@@ -1,0 +1,58 @@
+<div class="row m-3">
+  <div class="col-sm-6">
+    <div class="card">
+      <div class="card-header">
+        <h3>Customer Information</h3>
+      </div>
+      <div class="card-body">
+        <div><label>Name :</label> {{ customerinfo?.customerName }}</div>
+        <div><label>Phone Number :</label> {{ customerinfo?.phoneNo }}</div>
+        <div><label>Email :</label> {{ customerinfo?.emailId }}</div>
+        <div>
+          <label>Address :</label> {{ customerinfo?.address.fullAddress }}
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="col-sm-6">
+    <div class="card">
+      <div class="card-header"><h3>Order Details</h3></div>
+      <table class="text-center">
+        <thead>
+          <tr>
+            <th>Order Name</th>
+            <th>Quantity</th>
+            <th>value</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let x of orderdetails">
+            <td>{{ x?.orderName }}</td>
+            <td>x{{ x?.quantity }}</td>
+            <td>{{ x?.value }}</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>
+<div class="row m-3">
+  <div class="col-sm-6">
+    <div class="card">
+      <div class="card-body">
+        <div>
+          <label>Restaurent Name : </label
+          ><b> {{ restaurentdetails?.outletName }}</b>
+        </div>
+        <div><label>Phone No : </label> {{ restaurentdetails?.mobile }}</div>
+        <div>
+          <label>Alternate No : </label> {{ restaurentdetails?.mobile2 }}
+        </div>
+        <div><label>Email : </label> {{ restaurentdetails?.email }}</div>
+        <div>
+          <label>Address : </label> {{ restaurentdetails?.address.addressLine }}
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
